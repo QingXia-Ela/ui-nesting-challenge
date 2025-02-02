@@ -1,6 +1,7 @@
 import { createRef, useLayoutEffect, useMemo } from 'react'
 import { Component, createApp, defineComponent, h } from 'vue'
 import { createPropsDiffer } from '../utils/propsDiff'
+import { jsx } from 'react/jsx-runtime'
 
 function createPropsSender<T extends Record<string, any>>(VueComponent: any, props: T) {
   return defineComponent(
@@ -38,7 +39,8 @@ export default function React2Vue<T extends Record<string, any>>({
     }
   })
   return (
-    <div className='react-2-vue-wrapper' ref={ref}>
-    </div>
+    // <div className='react-2-vue-wrapper' ref={ref}>
+    // </div>
+    jsx('div', { class: 'react-2-vue-wrapper', ref })
   );
 }

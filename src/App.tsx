@@ -1,4 +1,4 @@
-import React2Vue from "./components/React2Vue";
+import React2Vue from "./components/React2Vue.ts";
 import Counter from "./react/Counter";
 import CounterVue from "./vue/Counter.vue";
 
